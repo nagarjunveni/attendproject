@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+
+	<navigation-rule>
+        <navigation-case>
+        <from-outcome>welcomepage</from-outcome>
+        <to-view-id>/chooseaction.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>studentSearchPage</from-outcome>
+        <to-view-id>/studentSearchPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>peopleSearchPage</from-outcome>
+        <to-view-id>/peopleSearchPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>createStudentPage</from-outcome>
+        <to-view-id>/createStudentPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>editStudentPage</from-outcome>
+        <to-view-id>/editStudentPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>studentSearchResultsPage</from-outcome>
+        <to-view-id>/studentSearchResultsPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+     <navigation-rule>
+        <navigation-case>
+        <from-outcome>peopleSearchResultsPage</from-outcome>
+        <to-view-id>/peopleSearchResultsPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>createPersonPage</from-outcome>
+        <to-view-id>/createPersonPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>editPersonPage</from-outcome>
+        <to-view-id>/editPersonPage.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <navigation-case>
+        <from-outcome>viewAttendanceSwipesPage</from-outcome>
+        <to-view-id>/viewAttedanceSwipes.xhtml</to-view-id>
+        <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+   
+    
+    
+</faces-config>

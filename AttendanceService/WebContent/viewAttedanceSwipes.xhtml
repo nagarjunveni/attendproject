@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	 <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">   
+		<ui:define name="content">
+			<h:form>
+	
+				<p:spacer width="100px" height="10px"></p:spacer>
+	
+				<p:panel header="Criteria" style="height:100px;">
+					 
+					 <p:panelGrid columns="6" style="float:left">
+                		<h:outputText value="From Date: " /> 
+					 	<p:calendar label="From Date"  value="#{attendanceBackingBean.attSearchCriteria.fromDate}"></p:calendar>
+                		
+                		<h:outputText value="To Date: " /> 
+					 	<p:calendar label="To Date" value="#{attendanceBackingBean.attSearchCriteria.toDate}"></p:calendar>
+                		
+  					 <h:outputText value="Roll No:" />
+					 <h:inputText value="#{attendanceBackingBean.attSearchCriteria.strRollNo}" />
+                		
+     					 <h:outputText value="Class:" />
+					 <h:selectOneMenu value="#{attendanceBackingBean.attSearchCriteria.strClass}">
+					 	<f:selectItem itemLabel="1" itemValue="1"/>
+					 	<f:selectItem itemLabel="2" itemValue="2"/>
+					 	<f:selectItem itemLabel="3" itemValue="3"/>
+					 	<f:selectItem itemLabel="4" itemValue="4"/>
+					 	<f:selectItem itemLabel="5" itemValue="5"/>
+					 	<f:selectItem itemLabel="6" itemValue="6"/>
+					 	<f:selectItem itemLabel="7" itemValue="7"/>
+					 	<f:selectItem itemLabel="8" itemValue="8"/>
+					 	<f:selectItem itemLabel="9" itemValue="9"/>
+					 	<f:selectItem itemLabel="10" itemValue="10"/>
+					 </h:selectOneMenu>
+		           		
+         		 <h:outputText value="Report Type:" />
+					 <h:selectOneMenu value="#{attendanceBackingBean.attSearchCriteria.attSearchType}">
+					 	<f:selectItem itemLabel="Present" itemValue="1"/>
+					 	<f:selectItem itemLabel="Abscent" itemValue="0"/>
+					 </h:selectOneMenu>
+					 
+					        	
+                	</p:panelGrid>
+					 
+					 <h:commandButton action="#{attendanceBackingBean.refreshResults}"
+						value="Search" />
+						
+				</p:panel>
+	
+	 			<p:spacer width="100px" height="50px"></p:spacer>
+				
+	
+				<p:dataTable value="#{attendanceBackingBean.attendanceSwipes}" rows="10"
+					var="attendanceRecord" paginator="true" paginatorPosition="top" >
+					<p:column headerText="Roll No">
+						<h:outputText value="#{attendanceRecord.rollNo}" />
+					</p:column>
+	
+					<p:column headerText="First Name">
+						<h:outputText value="#{attendanceRecord.firstName}" />
+					</p:column>
+	
+					<p:column headerText="Swipe Time">
+						<h:outputText value="#{attendanceRecord.strTimeStamp}" />
+					</p:column>
+					<p:column headerText="Swipe Date">
+						<h:outputText value="#{attendanceRecord.dateOfSwipe}" />
+					</p:column>
+	
+				</p:dataTable>
+				<p:spacer width="100px" height="50px"></p:spacer>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</html>

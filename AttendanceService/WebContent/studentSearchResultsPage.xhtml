@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">    
+        <ui:define name="content">
+            <h:form>
+                <p:panel id="panel" header="Student Search Results" style="margin-bottom:10px;">
+                	<p:dataTable value="#{studentBackingBean.searchStudentsList}" var="student" selectionMode="single" rowKey="#{student.strRollno}" selection="#{studentBackingBean.selectedStudent}">
+                		<p:column headerText="Roll No">
+                			<h:outputText value="#{student.strRollno}" />
+                		</p:column>
+                		<p:column headerText="First Name">
+                			<h:outputText value="#{student.strFirstName}" />
+                		</p:column>
+                		<p:column headerText="Last Name">
+                			<h:outputText value="#{student.strLastName}" />
+                		</p:column>
+                		<p:column headerText="Contact No">
+                			<h:outputText value="#{student.strContactNo}" />
+                		</p:column>
+                		<p:column headerText="Rfid No">
+                			<h:outputText value="#{student.strRfidNo}" />
+                		</p:column>
+                		<p:column headerText="Class">
+                			<h:outputText value="#{student.strClass}" />
+                		</p:column>
+                	</p:dataTable>  
+                	<h:commandButton value="Edit Student" action="#{studentBackingBean.goToEditStudentPage()}" />
+                	<h:commandButton value="New Student" action="#{studentBackingBean.gotToCreateStudentPage()}" />
+                	<h:commandButton value="Delete Student" action="#{studentBackingBean.deleteStudent()}" />
+                </p:panel>  
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

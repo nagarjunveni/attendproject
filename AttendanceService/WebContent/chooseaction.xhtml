@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">    
+        <ui:define name="content">
+            <h:form>
+
+				<br/><br/><br/><br/>
+					<h:outputText value="Welcome To Attendanace Tracker System" style="margin-left:350px; "/>
+				<br/><br/><br/><br/>
+	
+                <!-- 
+                
+                <p:panel id="panel" header="Student Home Page" style="margin-bottom:10px;">  
+                    <p:messages id="messages" />  
+                    <h:panelGrid>
+                        <h:commandLink value="Manage Users" style="color:teal;" action="test" rendered="#{loginBackingBean.boolIsAdmin}"/>
+                        <br></br>
+                        <h:commandLink value="Manage Students" style="color:teal;" action="#{studentBackingBean.goToStudentSearchPage()}"/>
+                        <br></br>
+                        <h:commandLink value="Manage People" style="color:teal;" action="#{personBackingBean.goToPeopleSearchPage()}"/>
+                        <br></br>
+                        <h:commandLink value="View Attendance Records" style="color:teal;" action="#{attendanceBackingBean.viewAttendanceSwipes()}"/>
+                        <br></br>
+                      
+                        
+                    </h:panelGrid>
+                    <br></br><br></br><br></br>
+                </p:panel>   -->
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="./../../resources/css/default.css" rel="stylesheet"
+		type="text/css" />
+	<link href="./../../resources/css/cssLayout.css" rel="stylesheet"
+		type="text/css" />
+		
+		<link href="#{facesContext.externalContext.requestContextPath}/css/custom.css" rel="stylesheet" type="text/css" />
+	<title>Attendance Tracker</title>
+</h:head>
+
+<h:body>
+
+	<div id="top">
+		<ui:insert name="top">
+			<div
+				style="width: 100%; line-height: 48px; background-color: #336699; color: white; font-size: 30px; text-align: center;">
+				Syncall - Attendance Tracking System</div>
+		</ui:insert>
+	</div>
+	<table width="100%">
+		<tr>
+			<ui:insert
+					name="left">
+				<h:form>
+
+					<div class="navigation">
+						<ul class="navig">
+							<li class="active"><p:commandLink styleClass="scroll"  value="Home" ></p:commandLink>   </li>
+							<li> <p:commandLink styleClass="scroll" value="Users" ></p:commandLink>   </li>
+							<li><p:commandLink  styleClass="scroll" value="AttendanceInfo" action="#{}"></p:commandLink>  </li>
+							<li><p:commandLink  styleClass="scroll" value="Students" ></p:commandLink>  </li>
+							<li><p:commandLink styleClass="scroll"  value="Teachers" ></p:commandLink>  </li>
+						</ul>
+					</div>
+
+
+				</h:form>
+
+
+			</ui:insert>
+			<td width="85%">
+				<div id="content" class="left_content">
+					<ui:insert name="content">Content</ui:insert>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div
+		style="border-bottom: grey 2px solid; border-left: grey 2px solid; border-right: grey 2px solid; border-top: grey 2px solid; height: 100%; margin: 4px auto; text-align: center; width: 100%;">
+		<ui:insert name="bottom">
+			<div style="background-color: #336699; width: 100%; color: #FFFFFF">@copyright
+				- 2014</div>
+		</ui:insert>
+	</div>
+</h:body>
+</html>

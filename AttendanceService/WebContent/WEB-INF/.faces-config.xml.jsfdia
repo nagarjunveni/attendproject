@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="welcomepage::#chooseaction.xhtml"
+    NAME="output" PATH="/chooseaction.xhtml"
+    TARGET="rules:#chooseaction.xhtml" TITLE="welcomepage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#chooseaction.xhtml"
+  PATH="/chooseaction.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="studentSearchPage::#studentSearchPage.xhtml"
+    NAME="output" PATH="/studentSearchPage.xhtml"
+    TARGET="rules:#studentSearchPage.xhtml" TITLE="studentSearchPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="peopleSearchPage::#peopleSearchPage.xhtml"
+    NAME="output" PATH="/peopleSearchPage.xhtml"
+    TARGET="rules:#peopleSearchPage.xhtml" TITLE="peopleSearchPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::3" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="createStudentPage::#createStudentPage.xhtml"
+    NAME="output" PATH="/createStudentPage.xhtml"
+    TARGET="rules:#createStudentPage.xhtml" TITLE="createStudentPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::4" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::4" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="editStudentPage::#editStudentPage.xhtml"
+    NAME="output" PATH="/editStudentPage.xhtml"
+    TARGET="rules:#editStudentPage.xhtml" TITLE="editStudentPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#studentSearchPage.xhtml"
+  PATH="/studentSearchPage.xhtml" SHAPE="240,705,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#createStudentPage.xhtml"
+  PATH="/createStudentPage.xhtml" SHAPE="240,817,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editStudentPage.xhtml"
+  PATH="/editStudentPage.xhtml" SHAPE="240,929,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#studentSearchResultsPage.xhtml"
+  PATH="/studentSearchResultsPage.xhtml" SHAPE="240,1041,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::5" SHAPE="32,1137,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="studentSearchResultsPage::#studentSearchResultsPage.xhtml"
+    NAME="output" PATH="/studentSearchResultsPage.xhtml"
+    TARGET="rules:#studentSearchResultsPage.xhtml"
+    TITLE="studentSearchResultsPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#viewAttedanceSwipes.xhtml"
+  PATH="/viewAttedanceSwipes.xhtml" SHAPE="240,1153,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::6" SHAPE="32,1249,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::6" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="peopleSearchResultsPage::#peopleSearchResultsPage.xhtml"
+    NAME="output" PATH="/peopleSearchResultsPage.xhtml"
+    TARGET="rules:#peopleSearchResultsPage.xhtml"
+    TITLE="peopleSearchResultsPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#peopleSearchPage.xhtml"
+  PATH="/peopleSearchPage.xhtml" SHAPE="240,1265,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::7" SHAPE="32,1361,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::7" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="createPersonPage::#createPersonPage.xhtml"
+    NAME="output" PATH="/createPersonPage.xhtml"
+    TARGET="rules:#createPersonPage.xhtml" TITLE="createPersonPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#peopleSearchResultsPage.xhtml"
+  PATH="/peopleSearchResultsPage.xhtml" SHAPE="240,1489,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::8" SHAPE="32,1473,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::8" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="editPersonPage::#editPersonPage.xhtml"
+    NAME="output" PATH="/editPersonPage.xhtml"
+    TARGET="rules:#editPersonPage.xhtml" TITLE="editPersonPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::9" SHAPE="32,1585,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::9" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="viewAttendanceSwipesPage::#viewAttedanceSwipes.xhtml"
+    NAME="output" PATH="/viewAttedanceSwipes.xhtml"
+    TARGET="rules:#viewAttedanceSwipes.xhtml"
+    TITLE="viewAttendanceSwipesPage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#createPersonPage.xhtml"
+  PATH="/createPersonPage.xhtml" SHAPE="240,1601,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editPersonPage.xhtml"
+  PATH="/editPersonPage.xhtml" SHAPE="240,1713,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

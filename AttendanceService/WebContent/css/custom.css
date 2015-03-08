@@ -1,0 +1,88 @@
+.ui-menu{
+	padding: 0px;	
+}
+
+.ui-widget button {
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+}
+
+.ui-widget {
+	font-size: 12px;	
+}
+
+.ui-panelgrid .ui-panelgrid-cell, .ui-panelgrid  .ui-widget-content{
+	border: 0px !important
+}
+
+.ui-button{
+	font-size:10px !important;
+	height:20px;
+	width:75px;
+}
+
+
+.ui-menubar .ui-menuitem {
+    clear: none;
+    width: auto;
+}
+
+.ui-menu, .ui-menu .ui-menu-child {
+    background: none;
+    border: 0 none;
+}
+
+.ui-menubar .ui-menuitem {
+    clear: none;
+    padding-right: 50px;
+    width: auto;
+}
+
+.ui-widget-content a {
+    text-align: center;
+}
+
+.ui-menuitem-link{
+	width: 120px;
+}
+
+.custom-active{
+	border-bottom: 3px solid #1abc9c;
+}
+
+.ui-state-hover{
+	color:white;
+}
+
+
+.navigation {
+    float: right;
+    margin-top: 7px;
+}
+
+ul.navig {
+    margin-top: 10px;
+    padding: 0;
+}
+
+ul.navig li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+ul.navig li a:hover, .active {
+    border-bottom: 3px solid #1abc9c;
+    padding: 5px;
+}
+
+
+ul.navig li a {
+    font-size: 1em;
+    font-weight: 400;
+    padding: 5px;
+    text-decoration: none;
+}
+a {
+    background: none repeat scroll 0 0 transparent;
+}
+

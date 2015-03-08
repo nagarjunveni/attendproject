@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">    
+        <ui:define name="content">
+            <h:form>
+                <p:panel id="panel" header="Student Search Results" style="margin-bottom:10px;">
+                	<p:dataTable value="#{personBackingBean.searchPersonList}" var="person" selectionMode="single" rowKey="#{person.strUniqueNo}" selection="#{personBackingBean.selectedPerson}">
+                		<p:column headerText="Unique No">
+                			<h:outputText value="#{person.strUniqueNo}" />
+                		</p:column>
+                		<p:column headerText="First Name">
+                			<h:outputText value="#{person.strFirstName}" />
+                		</p:column>
+                		<p:column headerText="Last Name">
+                			<h:outputText value="#{person.strLastName}" />
+                		</p:column>
+                		<p:column headerText="Contact No">
+                			<h:outputText value="#{person.strContactNo}" />
+                		</p:column>
+                		<p:column headerText="Rfid No">
+                			<h:outputText value="#{person.strRfidNo}" />
+                		</p:column>
+                		
+                	</p:dataTable>  
+                	<br/>
+                	<h:commandButton value="Create Person"  action="#{personBackingBean.gotToCreatePersonPage()}" />
+                	<h:commandButton value="Edit Person" action="#{personBackingBean.goToEditPersonPage()}" />
+                	<h:commandButton value="Delete Person" action="#{personBackingBean.deletePerson()}" />
+                </p:panel>  
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

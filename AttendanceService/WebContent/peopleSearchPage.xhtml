@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">    
+        <ui:define name="content">
+            <h:form>
+                <p:panel id="panel" header="People Search" style="margin-top:40px;height:100px;">  
+                	<p:panelGrid columns="6" style="float:left">
+                		<h:outputText value="UniqueNo:" style="font-weight:bold" />
+                	    <h:inputText value="#{personBackingBean.searchPerson.strUniqueNo}" />
+                		<h:outputText value="FirstName:" style="font-weight:bold" />
+                		<h:inputText value="#{personBackingBean.searchPerson.strFirstName}" />
+                		<h:outputText value="LastName:" style="font-weight:bold"/>
+                		<h:inputText value="#{personBackingBean.searchPerson.strLastName}" />
+                		
+                		<h:outputText value="ContactNo:" style="font-weight:bold"/>
+                		<h:inputText value="#{personBackingBean.searchPerson.strContactNo}" />
+                		<h:outputText value="Rfid:" style="font-weight:bold"/>
+                		<h:inputText value="#{personBackingBean.searchPerson.strRfidNo}" />
+                	
+                	</p:panelGrid>
+                
+                    <p:commandButton value="Search People" action="#{personBackingBean.goToPeopleResultsPage}" style="width:130px;" update="peopleSearchResultPanel"/>
+                </p:panel> 
+                
+                
+                <p:panel header="People Search Result" style="margin-top:40px;margin-bottom:20px;" id="peopleSearchResultPanel">
+                	<p:dataTable value="#{personBackingBean.searchPersonList}" var="per" selectionMode="single" rowKey="#{per.strUniqueNo}" selection="#{personBackingBean.selectedPerson}">
+                		<p:column headerText="Unique Number">
+                				#{per.strUniqueNo}
+                		</p:column>
+                		<p:column headerText="FirstName">
+                				#{per.strFirstName}
+                		</p:column>
+                		<p:column headerText="LastName">
+                				#{per.strLastName}
+                		</p:column>
+                		<p:column headerText="Contact number">
+                				#{per.strContactNo}
+                		</p:column>
+                		<p:column headerText="Rfid">
+                				#{per.strRfidNo}
+                		</p:column>
+                	</p:dataTable>
+                </p:panel>
+                
+                <p:commandButton value="Create Person" id="createPersonBut"  type="button" style="width:130px;" onclick="PF('dlg1').show();"/>
+	            <p:commandButton value="Edit Person" action="#{personBackingBean.goToEditPersonPage()}" update="updatePersonModalId" style="width:130px;" oncomplete="PF('updatePerModal').show();"/>
+	            <p:commandButton value="Delete Person" action="#{personBackingBean.deletePerson()}" update="peopleSearchResultPanel" style="width:130px;"/>
+	            
+	            
+	           <p:dialog header="Create Person" widgetVar="dlg1" minHeight="40" modal="true" width="500px" >
+	            		  
+	                    <p:messages id="messages" />  
+	                    <h:panelGrid columns="2">
+	                       <h:outputText value="Roll No: " />
+	                       <h:inputText value="#{personBackingBean.newPerson.strUniqueNo}" />
+	                       <h:outputText value="First Name: " />
+	                       <h:inputText value="#{personBackingBean.newPerson.strFirstName}" />
+	                       <h:outputText value="Last Name: " />
+	                       <h:inputText value="#{personBackingBean.newPerson.strLastName}" />
+	                       <h:outputText value="Contact No: " />
+	                       <h:inputText value="#{personBackingBean.newPerson.strContactNo}" />
+	                       <h:outputText value="Rfid No: " />
+	                       <h:inputText value="#{personBackingBean.newPerson.strRfidNo}" />
+	                       <h:outputText value="Client No: " />
+	                       <h:inputText value="#{personBackingBean.newPerson.strConsumerId}" />
+	                    </h:panelGrid>
+	                    <p:commandButton value="Create Person" action="#{personBackingBean.createNewPerson()}" style="width:130px;"  update="peopleSearchResultPanel" oncomplete="PF('dlg1').hide();"/>
+	                    <br></br><br></br><br></br>
+	                
+	            </p:dialog>
+	            
+	            <p:dialog header="Update Person" widgetVar="updatePerModal" modal="true" width="500px" id="updatePersonModalId">
+	            	     <p:messages id="messagesEdit"></p:messages>
+	            	     <h:panelGrid columns="2">
+	            	      <h:outputText value="Roll No: " />
+	                       <h:inputText value="#{personBackingBean.editPerson.strUniqueNo}" />
+	                       <h:outputText value="First Name: " />
+	                       <h:inputText value="#{personBackingBean.editPerson.strFirstName}" />
+	                       <h:outputText value="Last Name: " />
+	                       <h:inputText value="#{personBackingBean.editPerson.strLastName}" />
+	                       <h:outputText value="Contact No: " />
+	                       <h:inputText value="#{personBackingBean.editPerson.strContactNo}" />
+	                       <h:outputText value="Rfid No: " />
+	                       <h:inputText value="#{personBackingBean.editPerson.strRfidNo}" />
+	                       <h:outputText value="Client No: " />
+	                       <h:inputText value="#{personBackingBean.editPerson.strConsumerId}" />
+	            		 </h:panelGrid>
+	            		 <p:commandButton value="Update Person" action="#{personBackingBean.updatePerson}" style="width:130px;" update="peopleSearchResultPanel" oncomplete="PF('updatePerModal').hide();"></p:commandButton>        	
+	            
+	            </p:dialog>
+	            
+	            
+            </h:form>
+            
+           
+        </ui:define>
+    </ui:composition>
+</html>
+

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+     >
+<ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">
+	
+
+    <ui:define name="left"></ui:define>
+	<ui:define name="content">
+	    <h:form>
+	    <br/><br/><br/>
+	    <p:spacer/>
+	    <p:spacer/>
+	    <p:spacer/>
+	           <h:panelGrid columns="1">
+	                    <h:outputText 
+	                        rendered="#{loginBackingBean.boolError}" 
+	                        value="#{loginBackingBean.strErrorMesg}"/>
+	            </h:panelGrid>
+	            <h:panelGrid columns="3">
+	              
+	                <h:outputText value="Username" style="font-size: 20px;"/>
+	                <h:outputText value=" "/>
+	                <h:inputText value="#{loginBackingBean.strUserName}"  />
+	                <h:outputText value="Password" style="font-size: 20px;"/>
+	                <h:outputText value=" "/>
+	                <h:inputSecret value="#{loginBackingBean.strPassword}" />
+	                
+	            </h:panelGrid>
+	            <br/><br/>
+	            <h:commandButton value="Submit" style="font-size: 15px;" action="#{loginBackingBean.login}"></h:commandButton>                  
+	            <h:commandButton value="Reset" style="font-size: 15px;" action="#{loginBackingBean.reset}"></h:commandButton>   
+	            <h:commandButton value="New User" style="font-size: 15px;" action="#{personBackingBean.preNewUser}"></h:commandButton>
+	    <br/><br/><br/><br/><br/><br/>
+	    </h:form>
+	</ui:define>
+</ui:composition>
+</html>
+

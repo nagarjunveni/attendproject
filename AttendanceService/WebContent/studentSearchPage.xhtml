@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">    
+        <ui:define name="content">
+            <h:form>
+				<p:panel header="Student Search" style="margin-top:40px;height: 100px;">
+				
+				
+					<p:panelGrid columns="6" style="float:left;border:0px">
+						<h:outputText value="FirstName:  "  style="font-weight:bold;"/>
+						<h:inputText value="#{personBackingBean.searchStudent.strFirstName}" />
+						<h:outputText value="LastName:"  style="font-weight:bold;"/>
+						<h:inputText value="#{personBackingBean.searchStudent.strLastName}" ></h:inputText>
+						<h:outputText value="Roll No:"  style="font-weight:bold;"/>
+						<h:inputText value="#{personBackingBean.searchStudent.strRollno}"  />
+						<h:outputText value="Rfid:" style="font-weight:bold;"/>
+						<h:inputText value="#{personBackingBean.searchStudent.strRfidNo}" ></h:inputText>
+						<h:outputText value="Class:" style="font-weight:bold;"/>
+						<h:selectOneMenu value="#{personBackingBean.searchStudent.strClass}" >
+							<f:selectItem itemLabel="1" itemValue="1"/>
+							<f:selectItem itemLabel="2" itemValue="2"/>
+							<f:selectItem  itemLabel="3" itemValue="3"/>
+							<f:selectItem  itemLabel="4" itemValue="4"/>
+							<f:selectItem  itemLabel="5" itemValue="5"/>
+							<f:selectItem itemLabel="6" itemValue="6"/>
+							<f:selectItem  itemLabel="7" itemValue="7"/>
+							<f:selectItem  itemLabel="8" itemValue="8"/>
+							<f:selectItem  itemLabel="9" itemValue="9"/>
+							<f:selectItem itemLabel="10" itemValue="10"/>
+						</h:selectOneMenu>
+					</p:panelGrid>
+				
+					
+					
+					
+					
+					<p:commandButton value="Search" action="#{personBackingBean.searchStudents}" update="StudentSearchListPanel"/>
+				
+				</p:panel>
+				<p:panel header="Student Search List" id="StudentSearchListPanel" style="margin-top:40px;margin-bottom:30px;">
+					<p:dataTable value="#{personBackingBean.searchStudentsList}" var="student">
+						
+						<p:column headerText="RollNo">
+							#{student.strRollno}
+						</p:column>
+						<p:column headerText="FirstName">
+							#{student.strFirstName}
+						</p:column>
+						<p:column headerText="LastName">
+							#{student.strLastName}
+						</p:column>						
+						<p:column headerText="Class">
+							#{student.strClass}
+						</p:column>
+					
+					
+					</p:dataTable>
+				
+				</p:panel>
+				
+            </h:form>
+            
+            
+        </ui:define>
+    </ui:composition>
+</html>
+

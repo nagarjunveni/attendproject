@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="WEB-INF/templates/attendanceTemplate.xhtml">    
+        <ui:define name="content">
+            <h:form>
+
+                <p:panel id="panel" header="Create Student Page" style="margin-bottom:10px;">  
+                    <p:messages id="messages" />  
+                    <h:panelGrid columns="2">
+                       <h:outputText value="Roll No: " />
+                       <h:inputText value="#{studentBackingBean.newStudent.strRollno}" />
+                       <h:outputText value="First Name: " />
+                       <h:inputText value="#{studentBackingBean.newStudent.strFirstName}" />
+                       <h:outputText value="Last Name: " />
+                       <h:inputText value="#{studentBackingBean.newStudent.strLastName}" />
+                       <h:outputText value="Contact No: " />
+                       <h:inputText value="#{studentBackingBean.newStudent.strContactNo}" />
+                       <h:outputText value="Class: " />
+                       <h:inputText value="#{studentBackingBean.newStudent.strClass}" />
+                       <h:outputText value="RFID No: " />
+                       <h:inputText value="#{studentBackingBean.newStudent.strRfidNo}" />
+                    </h:panelGrid>
+                    <h:commandButton value="Create Student" action="#{studentBackingBean.createNewStudent()}" />
+                    <br></br><br></br><br></br>
+                </p:panel>  
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+
